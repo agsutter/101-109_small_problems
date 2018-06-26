@@ -21,7 +21,7 @@ def odd?(num)
 
   return 'Please use an integer' if num.to_s.to_i != num
 
-  if num.odd?
+  if num % 2 == 1
     true
   else
     false
