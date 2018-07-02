@@ -20,7 +20,7 @@ def stringy(number)
     elsif string.end_with?('0') || string.empty?
       string << '1'
     end
-  number -= 1
+    number -= 1
   end
   puts string
 end
