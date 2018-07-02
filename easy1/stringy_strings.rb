@@ -9,20 +9,20 @@
 # puts stringy(7) == '1010101'
 
 def valid_integer?(number)
-  number.to_i.abs.to_s == number
+  (number.to_i.abs.to_s == number) && (number.to_i != 0)
 end
 
 def stringy(number)
-  number_array = []
+  string = ''
   until number.zero?
-    if number_array.last == '1'
-      number_array << '0'
-    elsif number_array.last == '0' || number_array == []
-      number_array << '1'
+    if string.end_with?('1')
+      string << '0'
+    elsif string.end_with?('0') || string.empty?
+      string << '1'
     end
-    number -= 1
+  number -= 1
   end
-  puts number_array.join
+  puts string
 end
 
 number = ''
