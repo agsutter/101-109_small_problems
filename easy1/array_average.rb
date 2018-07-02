@@ -19,8 +19,7 @@ end
 
 def array_average(array)
   array.map!(&:to_f)
-  average = array.sum / array.length
-  puts average
+  array.sum / array.length
 end
 
 array_of_numbers = []
@@ -48,6 +47,4 @@ loop do
   end
 end
 
-p array_of_numbers
-
-array_average(array_of_numbers)
+puts array_average(array_of_numbers)
