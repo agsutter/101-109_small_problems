@@ -2,17 +2,6 @@
 # and returns the average of all numbers in the array. The array will
 # never be empty and the numbers will always be positive integers.
 
-# INFORMAL PSEUDO-CODE
-#   Given an array of integers
-
-#   - Average == sum / array.size
-#   - Validate if...
-#     - array is empty?
-#     - numbers are positive?
-#     - numbers are integers
-
-#   Return the average of all the numbers in the array
-
 def valid_input?(number)
   number.to_i.abs.to_s == number || number.to_f.abs.to_s == number
 end
