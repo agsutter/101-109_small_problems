@@ -10,8 +10,10 @@
 # this the old-fashioned way and construct the string by analyzing and
 # manipulating the number.
 
-# Examples
+def integer_to_string(integer)
+  integer.digits.reverse.join
+end
 
-integer_to_string(4321) == '4321'
-integer_to_string(0) == '0'
-integer_to_string(5000) == '5000'
+puts integer_to_string(4321) == '4321'
+puts integer_to_string(0) == '0'
+puts integer_to_string(5000) == '5000'

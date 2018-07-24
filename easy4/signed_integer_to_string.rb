@@ -8,8 +8,15 @@
 # such as Integer#to_s, String(), Kernel#format, etc. You may, however, use
 # integer_to_string from the previous exercise.
 
-# Examples
+def integer_to_string(integer)
+  integer.abs.digits.reverse.join
+end
 
-signed_integer_to_string(4321) == '+4321'
-signed_integer_to_string(-123) == '-123'
-signed_integer_to_string(0) == '0'
+def signed_integer_to_string(integer)
+  sign = integer.abs != integer ? '-' : '+'
+  integer == 0 ? '0' : integer_to_string(integer).prepend(sign)
+end
+
+puts signed_integer_to_string(4321) == '+4321'
+puts signed_integer_to_string(-123) == '-123'
+puts signed_integer_to_string(0) == '0'
