@@ -5,8 +5,8 @@
 
 def center_of(string)
   middle = string.length/2
-  return string.chars[(middle - 1)..middle].join if string.length.even?
-  string.chars[middle]
+  return string[(middle - 1)..middle] if string.length.even?
+  string[middle]
 end
 
 p center_of('I love ruby') == 'e'
