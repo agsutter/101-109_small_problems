@@ -5,5 +5,10 @@
 # return a greeting that uses the person's full name, and mentions the
 # person's title.
 
-greetings(['John', 'Q', 'Doe'], { title: 'Master', occupation: 'Plumber' })
-=> Hello, John Q Doe! Nice to have a Master Plumber around.
+def greetings(given_array, given_hash)
+  "Hello, #{given_array.join(' ')}! " \
+    "Nice to have a #{given_hash.values.join(' ')} around."
+end
+
+p greetings(%w(John Q Doe), title: 'Master', occupation: 'Plumber')
+# => Hello, John Q Doe! Nice to have a Master Plumber around.

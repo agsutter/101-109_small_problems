@@ -2,8 +2,9 @@
 # as a single String argument, and returns a string that contains the last
 # name, a comma, a space, and the first name.
 
-def swap_name(name)
-  
+def swap_name(given_name)
+  name_array = given_name.split
+  "#{name_array[1]}, #{name_array[0]}"
 end
 
-swap_name('Joe Roberts') == 'Roberts, Joe'
+p swap_name('Joe Roberts') == 'Roberts, Joe'

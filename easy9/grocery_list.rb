@@ -3,8 +3,8 @@
 # each fruit.
 
 def buy_fruit(array)
-  
+  array.map { |sub_array| [sub_array[0]] * sub_array[1] }.flatten
 end
 
-buy_fruit([["apples", 3], ["orange", 1], ["bananas", 2]]) ==
-  ["apples", "apples", "apples", "orange", "bananas","bananas"]
+p buy_fruit([['apples', 3], ['orange', 1], ['bananas', 2]]) ==
+  %w(apples apples apples orange bananas bananas)

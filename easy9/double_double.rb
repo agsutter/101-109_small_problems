@@ -11,17 +11,21 @@
 # the underscores when printing long numbers. Don't be alarmed if you don't
 # see the underscores when running your tests.
 
-def twice(integer)
-  
+def twice(number)
+  num_size = number.to_s.size
+  half = num_size / 2
+  num_arr = number.to_s.split(//)
+  return number if num_arr[0, half] == num_arr[half, half] && num_size.even?
+  number * 2
 end
 
-twice(37) == 74
-twice(44) == 44
-twice(334433) == 668866
-twice(444) == 888
-twice(107) == 214
-twice(103103) == 103103
-twice(3333) == 3333
-twice(7676) == 7676
-twice(123_456_789_123_456_789) == 123_456_789_123_456_789
-twice(5) == 10
+p twice(37) == 74
+p twice(44) == 44
+p twice(334_433) == 668_866
+p twice(444) == 888
+p twice(107) == 214
+p twice(103_103) == 103_103
+p twice(3_333) == 3_333
+p twice(7_676) == 7_676
+p twice(123_456_789_123_456_789) == 123_456_789_123_456_789
+p twice(5) == 10

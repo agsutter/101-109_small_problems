@@ -3,9 +3,9 @@
 # number is 0 or negative, return the original number.
 
 def negative(integer)
-  
+  (integer.abs == integer && !integer.zero?) ? -integer : integer
 end
 
-negative(5) == -5
-negative(-3) == -3
-negative(0) == 0      # There's no such thing as -0 in ruby
+p negative(5) == -5
+p negative(-3) == -3
+p negative(0).zero?
