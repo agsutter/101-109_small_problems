@@ -17,5 +17,5 @@ def minilang(command_string)
   register
 end
 
-p minilan('4 PUSH 7 PUSH ADD PUSH 8 MULT 3 MOD PUSH 5 SUB 2 PUSH DIV')
-p minilan('8 PUSH 7 PUSH 9 POP')
+p minilang('4 PUSH 7 PUSH ADD PUSH 8 MULT 3 MOD PUSH 5 SUB 2 PUSH DIV')
+p minilang('8 PUSH 7 PUSH 9 POP')
